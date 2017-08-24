@@ -1,0 +1,363 @@
+<% include ../partials/top %>
+
+<body>
+
+    <% include ../partials/header %>
+    
+ <div class="banner-area">
+ 	
+    <div class="container">
+   		<div class="row form-pannel">
+                        <!-- Form controls -->
+                        <div class="col-sm-12">
+
+
+
+                            <span class="steps"><img src="images/step 3.png" alt="imag" title="imagessteps"/></span>
+
+
+
+
+                            <div class="panel panel-bd">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Business Documents</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-12">
+                                                <fieldset>
+                                                    <form action="/supplier/postCompanyDocs" method="post" enctype="multipart/form-data">
+                                                     <div class="panel-group" id="accordion">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Company Pan Card</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse1" class="panel-collapse collapse in">
+                                                                <div class="panel-body">
+                                                                    
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Pan Card</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Pan" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Company Address Proof</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse2" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Address Proof</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Address" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Certificate of Incorporation</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse3" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Certificate</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Incorporation" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">MSME Declaration</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse4" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Declaration</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="MSME" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Credit Facilities Declaration</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse5" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Declaration</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Credit" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Bank Statement</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse6" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="tBank">
+                                                                                <tr>
+                                                                                    <td>Bank Statement</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="BankStatement[]" id="txtBankStatement" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            <tfoot>
+                                                                                <tr>
+                                                                                    <th scope="row" colspan="4">
+                                                                                        <a href="Javascript:;" id="btnBAddMore">Add More</a>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </tfoot>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Financial Statement (Audited)</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse7" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="tPL">
+                                                                                <tr>
+                                                                                    <td>PL Statement</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="PL[]" id="txtPL" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 84px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            <tfoot>
+                                                                                <tr>
+                                                                                    <th scope="row" colspan="4"><a href="Javascript:;" id="btnPLAddMore">Add More</a></th>
+                                                                                </tr>
+                                                                            </tfoot>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div> 
+                                                    <button type="submit" name="search" id="search-btn" class="btn btn-primary">Submit</button>
+                                                        </form>
+
+
+
+                                                </fieldset>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+   </div>
+
+
+
+
+ </div>
+ 
+ <div class="where-are-you">
+ 	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-4">
+            	<figure>
+                	<img src="images/localtion.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4">
+            	<figure>
+                	<img src="images/thousend.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4">
+            	<figure>
+                	<img src="images/lock.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+
+
+    <% include ../partials/footer %>
+
+
+
+
+
+    <% include ../partials/bottom %>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btnBAddMore").click(function() {
+                $("#tBank").append('<tr><td>Bank Statement</td><td>Pending</td><td style="text-align: center;"><a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a><input type="file" name="BankStatement[]" id="txtPan"></td></tr>');
+            });
+
+
+            $("#btnPLAddMore").click(function() {
+                $("#tPL").append('<tr><td>PL Statement</td><td>Pending</td><td style="text-align: center;"><a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a><input type="file" name="PL[]" id="txtPL"></td></tr>');
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>

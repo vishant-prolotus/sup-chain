@@ -1,0 +1,44 @@
+<aside class="main-sidebar" style="background-color: #3b7cb4;">
+    <!-- sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel text-center">
+            <div class="image">
+                <img src="/assets/dist/img/user2-160x160.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="info">
+                <p><%=accData.bankName%></p>
+                <p><%=accData.employeeName%></p>
+            </div>
+        </div>  
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form> <!-- /.search form -->
+        <!-- sidebar menu -->
+        <ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active">
+                <a href="/bank"><i class="ti-home"></i> <span>Dashboard</span></a>
+            </li>
+            <li><a href="/bank/manage-buyer" id=""><i class="hvr-buzz-out fa fa-money"></i><span>Manage Buyers</span></a></li>
+            <li><a href="/bank/manage-supplier" id=""><i class="hvr-buzz-out fa fa-money"></i><span>Manage Suppliers</span></a></li>
+            <li><a href="/bank/manage-invoice" id="btnAddSupplier"><i class="hvr-buzz-out fa fa-money"></i><span>Manage Invoices</span></a></li>
+            <li><a href="/bank/settings"><i class="pe-7s-settings"></i> Settings</a></li>
+        </ul>
+    </div> <!-- /.sidebar -->
+</aside>
+<style>
+    .sidebar-menu > li > a {
+        color: #FFFFFF !important;
+    }
+    .sidebar-menu > li.header {
+        border-bottom: 1px solid rgba(59, 70, 72, 0.5);
+        color: #FFFFFF;
+    }
+</style>

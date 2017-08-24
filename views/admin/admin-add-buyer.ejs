@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SofoSupply - Manage Buyers</title>
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="assets/dist/img/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/dist/img/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/dist/img/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/dist/img/ico/apple-touch-icon-144-precomposed.png">
+
+        <!-- Start Global Mandatory Style
+        =====================================================================-->
+        <!-- jquery-ui css -->
+        <link href="/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap rtl -->
+        <!--<link href="/assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
+        <!-- Lobipanel css -->
+        <link href="/assets/plugins/lobipanel/lobipanel.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pace css -->
+        <link href="/assets/plugins/pace/flash.css" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pe-icon -->
+        <link href="/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css"/>
+        <!-- Themify icons -->
+        <link href="/assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css"/>
+        <!-- End Global Mandatory Style
+        =====================================================================-->
+        <!-- Start page Label Plugins 
+        =====================================================================-->
+        <!-- Toastr css -->
+        <link href="/assets/plugins/toastr/toastr.css" rel="stylesheet" type="text/css"/>
+        <!-- Emojionearea -->
+        <link href="assets/plugins/emojionearea/emojionearea.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Monthly css -->
+        <link href="/assets/plugins/monthly/monthly.css" rel="stylesheet" type="text/css"/>
+        <!-- End page Label Plugins 
+        =====================================================================-->
+        <!-- Start Theme Layout Style
+        =====================================================================-->
+        <!-- Theme style -->
+        <link href="/assets/dist/css/styleBD.css" rel="stylesheet" type="text/css"/>
+        <!-- Theme style rtl -->
+        <!--<link href="/assets/dist/css/styleBD-rtl.css" rel="stylesheet" type="text/css"/>-->
+        <!-- End Theme Layout Style
+        =====================================================================-->
+    </head>
+<body class="hold-transition sidebar-mini">
+
+
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            <% include ../partials/admin_header %>
+            <!-- =============================================== -->
+            <!-- Left side column. contains the sidebar -->
+            <% include ../partials/admin_left %>
+            <!-- =============================================== -->
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="header-icon">
+                        <i class="pe-7s-world"></i>
+                    </div>
+                    <div class="header-title">
+                        <h1>SofoSupply - Manage Buyers</h1>
+                        <small>You can add, edit and delete buyers.</small>
+                        <ol class="breadcrumb">
+                            <li><a href="/admin"><i class="pe-7s-home"></i> Home</a></li>
+                            <li class="active">Dashboard</li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+
+
+
+
+                        <div >
+                            <div class="panel panel-bd">
+                                <div class="panel-heading" style="top:0;">
+                                    <div class="panel-title">
+                                        <h4 style="font-size:30px;">Add Buyer</h4>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-body">
+                                    
+
+
+                <div class="panel panel-bd">                    
+                    <form action="/admin/manage-buyer" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="txtCreditPeriod">Full Name <span class="mandatory">*</span></label>
+                        <input type="text" name="employee" id="employee" value="" class="form-control" tabindex="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtSupplierName">State where the Business is Registered <span class="mandatory">*</span></label>
+                        <select name="state" id="state" class="form-control" tabindex="2">
+                            <option value="">Select state</option>
+                            <option value="ANDAMAN &amp; NICOBAR ISLANDS">ANDAMAN &amp; NICOBAR ISLANDS</option>
+                            <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                            <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                            <option value="ASSAM">ASSAM</option>
+                            <option value="BIHAR">BIHAR</option>
+                            <option value="CHANDIGARH">CHANDIGARH</option>
+                            <option value="CHHATTISGARH">CHHATTISGARH</option>
+                            <option value="DADRA &amp; NAGAR HAVELI">DADRA &amp; NAGAR HAVELI</option>
+                            <option value="DAMAN &amp; DIU">DAMAN &amp; DIU</option>
+                            <option value="National Capital Territory of Delhi">DELHI</option>
+                            <option value="GOA">GOA</option>
+                            <option value="GUJARAT">GUJARAT</option>
+                            <option value="HARYANA">HARYANA</option>
+                            <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                            <option value="JAMMU &amp; KASHMIR">JAMMU &amp; KASHMIR</option>
+                            <option value="JHARKHAND">JHARKHAND</option>
+                            <option value="KARNATAKA">KARNATAKA</option>
+                            <option value="KERALA">KERALA</option>
+                            <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                            <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                            <option value="MAHARASHTRA">MAHARASHTRA</option>
+                            <option value="MANIPUR">MANIPUR</option>
+                            <option value="MEGHALAYA">MEGHALAYA</option>
+                            <option value="MIZORAM">MIZORAM</option>
+                            <option value="NAGALAND">NAGALAND</option>
+                            <option value="ODISHA">ODISHA</option>
+                            <option value="PUDUCHERRY">PUDUCHERRY</option>
+                            <option value="PUNJAB">PUNJAB</option>
+                            <option value="RAJASTHAN">RAJASTHAN</option>
+                            <option value="SIKKIM">SIKKIM</option>
+                            <option value="TAMIL NADU">TAMIL NADU</option>
+                            <option value="TELANGANA">TELANGANA</option>
+                            <option value="TRIPURA">TRIPURA</option>
+                            <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                            <option value="UTTARAKHAND">UTTARAKHAND</option>
+                            <option value="WEST BENGAL">WEST BENGAL</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtSupplierName">Business Name <span class="mandatory">*</span></label>
+                        <input type="text" name="name" id="name" value="" class="form-control" tabindex="3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail">Email <span class="mandatory">*</span></label>
+                        <input type="email" name="email" id="email" value="" class="form-control" tabindex="4" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword">Password <span class="mandatory">*</span></label>
+                        <input class="form-control" name="password" id="password" type="password" tabindex="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtMobile">Mobile <span class="mandatory">*</span></label>
+                        <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                            <div class="input-group">
+                            <div class="input-group-addon">+ 91</div>
+                            <input class="form-control" name="mobile" id="password" type="password" tabindex="5" required>
+                            
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="employee" id="employee" type="hidden" tabindex="7" value="Tashish Singh">
+                        <input class="form-control" name="vemail" id="vemail" type="hidden" tabindex="8" value="verifier@">
+                        <input class="form-control" name="vpassword" id="vpassword" type="hidden" tabindex="9" value="Password123">
+                        <input class="form-control" name="vemployee" id="vemployee" type="hidden" tabindex="10" value="Viany Sharma">
+                    </div>
+                                
+                
+                                <div class="panel-heading">
+                                    <div class="panel-title clearfix">
+                                        <h4 class="pull-left" style="font-size: 30px;">Business Information</h4>
+                                        <span class="pull-right">All fields are marked with * mandotory</span>
+                                    </div>
+                                </div>
+                                
+                                    
+                                    <div class="panel-body">
+                                    <div class="row clearfix">
+                                    <div class="col-sm-12">
+                                        <div class="mb">
+                                                <fieldset>
+                                                    <h3 style="margin-top:0;">Business Details</h3>
+                                                    
+
+                                                    <div class="row">
+                                                        
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtCIN">CIN <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="cin" id="cin" placeholder="Enter CIN" type="text" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtCIN">Business PAN <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="pan" id="pan" placeholder="Enter PAN" type="text" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="cmbTypeBusiness">Type of Business Entity <span class="mandatory">*</span></label>
+                                                                <select class="form-control" name="businessType" id="businessType" required>
+                                                                    <option value="Sole Proprietorship">Sole Proprietorship</option>
+                                                                    <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                                                                    <option value="Public Limited Company">Public Limited Company</option>
+                                                                    <option value="Privately Held Company">Privately Held Company</option>
+                                                                    <option value="Private Company Limited by Shares">Private Company Limited by Shares</option>
+                                                                    <option value="Unlimited Company">Unlimited Company</option>
+                                                                    <option value="Subsidiary">Subsidiary</option>
+                                                                    <option value="Joint Venture">Joint Venture</option>
+                                                                    <option value="Joint Venture">Joint-Stock Company</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="cmbTypeIndustry">Type of Industry <span class="mandatory">*</span></label>
+                                                                <select class="form-control" name="industryType" id="industryType" required>
+                                                                    <option value="Agriculture">Agriculture</option>
+                                                                    <option value="Automobiles">Automobiles</option>
+                                                                    <option value="Auto Components">Auto Components</option>
+                                                                    <option value="Aviation">Aviation</option>
+                                                                    <option value="Banking">Banking</option>
+                                                                    <option value="Biotechnology">Biotechnology</option>
+                                                                    <option value="Cement">Cement</option>
+                                                                    <option value="Consumer Markets">Consumer Markets</option>
+                                                                    <option value="Education and Training">Education and Training</option>
+                                                                    <option value="Engineering">Engineering</option>
+                                                                    <option value="Financial Services">Financial Services</option>
+                                                                    <option value="Food Processing">Food Processing</option>
+                                                                    <option value="Gems and Jewellery">Gems and Jewellery</option>
+                                                                    <option value="Healthcare">Healthcare</option>
+                                                                    <option value="Infrastructure">Infrastructure</option>
+                                                                    <option value="Insurance">Insurance</option>
+                                                                    <option value="IT & ITeS">IT & ITeS</option>
+                                                                    <option value="Manufacturing">Manufacturing</option>
+                                                                    <option value="Media and Entertainment">Media and Entertainment</option>
+                                                                    <option value="Oil and Gas">Oil and Gas</option>
+                                                                    <option value="Pharmaceuticals">Pharmaceuticals</option>
+                                                                    <option value="Real Estate">Real Estate</option>
+                                                                    <option value="Research and Development">Research and Development</option>
+                                                                    <option value="Retail">Retail</option>
+                                                                    <option value="Science and Technology">Science and Technology</option>
+                                                                    <option value="Semiconductor">Semiconductor</option>
+                                                                    <option value="Services">Services</option>
+                                                                    <option value="Steel">Steel</option>
+                                                                    <option value="Telecommunications">Telecommunications</option>
+                                                                    <option value="Textiles">Textiles</option>
+                                                                    <option value="Agriculture">Tourism and Hospitality</option>
+                                                                    <option value="Agriculture">Urban Market</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtEmail">Business Email <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="txtEmail" id="txtEmail" placeholder="Enter Contact Email" type="email" value="" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtMobile">Mobile <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="txtMobile" id="txtMobile" placeholder="Enter Mobile" type="text" value="" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtLandline">Landline</label>
+                                                                <input class="form-control" name="landline" id="landline" placeholder="Enter Landline" type="text">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+
+
+
+
+                                                </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb">
+                                                    <fieldset>
+                                                        <h3>Business Address</h3>
+                                                        <div class="form-group">
+                                                            <label for="txtAddress">Address <span class="mandatory">*</span></label>
+                                                            <input class="form-control" name="street" id="street" placeholder="Enter Address" type="text" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="txtCity">City <span class="mandatory">*</span></label>
+                                                            <input class="form-control" name="city" id="city" placeholder="Enter City" type="text" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="txtState">State <span class="mandatory">*</span></label>
+                                                            <select name="state" id="state" class="form-control" required>
+                                                                <option value="">Select state</option>
+                                                                <option value="ANDAMAN &amp; NICOBAR ISLANDS">ANDAMAN &amp; NICOBAR ISLANDS</option>
+                                                                <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                                                                <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                                                <option value="ASSAM">ASSAM</option>
+                                                                <option value="BIHAR">BIHAR</option>
+                                                                <option value="CHANDIGARH">CHANDIGARH</option>
+                                                                <option value="CHHATTISGARH">CHHATTISGARH</option>
+                                                                <option value="DADRA &amp; NAGAR HAVELI">DADRA &amp; NAGAR HAVELI</option>
+                                                                <option value="DAMAN &amp; DIU">DAMAN &amp; DIU</option>
+                                                                <option value="National Capital Territory of Delhi">DELHI</option>
+                                                                <option value="GOA">GOA</option>
+                                                                <option value="GUJARAT">GUJARAT</option>
+                                                                <option value="HARYANA">HARYANA</option>
+                                                                <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                                                                <option value="JAMMU &amp; KASHMIR">JAMMU &amp; KASHMIR</option>
+                                                                <option value="JHARKHAND">JHARKHAND</option>
+                                                                <option value="KARNATAKA">KARNATAKA</option>
+                                                                <option value="KERALA">KERALA</option>
+                                                                <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                                                                <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                                                                <option value="MAHARASHTRA">MAHARASHTRA</option>
+                                                                <option value="MANIPUR">MANIPUR</option>
+                                                                <option value="MEGHALAYA">MEGHALAYA</option>
+                                                                <option value="MIZORAM">MIZORAM</option>
+                                                                <option value="NAGALAND">NAGALAND</option>
+                                                                <option value="ODISHA">ODISHA</option>
+                                                                <option value="PUDUCHERRY">PUDUCHERRY</option>
+                                                                <option value="PUNJAB">PUNJAB</option>
+                                                                <option value="RAJASTHAN">RAJASTHAN</option>
+                                                                <option value="SIKKIM">SIKKIM</option>
+                                                                <option value="TAMIL NADU">TAMIL NADU</option>
+                                                                <option value="TELANGANA">TELANGANA</option>
+                                                                <option value="TRIPURA">TRIPURA</option>
+                                                                <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                                                                <option value="UTTARAKHAND">UTTARAKHAND</option>
+                                                                <option value="WEST BENGAL">WEST BENGAL</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="txtZip">Pin Code <span class="mandatory">*</span></label>
+                                                            <input class="form-control" name="pin" id="pin" placeholder="Enter Pin Code" type="text" required>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-6 mb">
+                                                <fieldset>
+                                                    <h3>Correspondence Address</h3>
+                                                    <div class="form-group">
+                                                        <label for="txtAddress">Address <span class="mandatory">*</span></label>
+                                                        <input class="form-control" name="c_street" id="c-street" placeholder="Enter Address" type="text" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="txtCity">City <span class="mandatory">*</span></label>
+                                                        <input class="form-control" name="c_city" id="c-city" placeholder="Enter City" type="text" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="txtState">State <span class="mandatory">*</span></label>
+                                                        <select name="c_state" id="c-state" class="form-control" required>
+                                                            <option value="">Select state</option>
+                                                            <option value="ANDAMAN &amp; NICOBAR ISLANDS">ANDAMAN &amp; NICOBAR ISLANDS</option>
+                                                            <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                                                            <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                                            <option value="ASSAM">ASSAM</option>
+                                                            <option value="BIHAR">BIHAR</option>
+                                                            <option value="CHANDIGARH">CHANDIGARH</option>
+                                                            <option value="CHHATTISGARH">CHHATTISGARH</option>
+                                                            <option value="DADRA &amp; NAGAR HAVELI">DADRA &amp; NAGAR HAVELI</option>
+                                                            <option value="DAMAN &amp; DIU">DAMAN &amp; DIU</option>
+                                                            <option value="National Capital Territory of Delhi">DELHI</option>
+                                                            <option value="GOA">GOA</option>
+                                                            <option value="GUJARAT">GUJARAT</option>
+                                                            <option value="HARYANA">HARYANA</option>
+                                                            <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                                                            <option value="JAMMU &amp; KASHMIR">JAMMU &amp; KASHMIR</option>
+                                                            <option value="JHARKHAND">JHARKHAND</option>
+                                                            <option value="KARNATAKA">KARNATAKA</option>
+                                                            <option value="KERALA">KERALA</option>
+                                                            <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                                                            <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                                                            <option value="MAHARASHTRA">MAHARASHTRA</option>
+                                                            <option value="MANIPUR">MANIPUR</option>
+                                                            <option value="MEGHALAYA">MEGHALAYA</option>
+                                                            <option value="MIZORAM">MIZORAM</option>
+                                                            <option value="NAGALAND">NAGALAND</option>
+                                                            <option value="ODISHA">ODISHA</option>
+                                                            <option value="PUDUCHERRY">PUDUCHERRY</option>
+                                                            <option value="PUNJAB">PUNJAB</option>
+                                                            <option value="RAJASTHAN">RAJASTHAN</option>
+                                                            <option value="SIKKIM">SIKKIM</option>
+                                                            <option value="TAMIL NADU">TAMIL NADU</option>
+                                                            <option value="TELANGANA">TELANGANA</option>
+                                                            <option value="TRIPURA">TRIPURA</option>
+                                                            <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                                                            <option value="UTTARAKHAND">UTTARAKHAND</option>
+                                                            <option value="WEST BENGAL">WEST BENGAL</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="txtZip">Pin Code <span class="mandatory">*</span></label>
+                                                        <input class="form-control" name="c_pin" id="c-pin" placeholder="Enter Pin Code" type="text" required>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+
+
+                                            </div>
+
+
+
+
+                                                <div class="">
+                                           		
+                                                    <div class="col-md-">
+                                                        <div class="form-group clon-checkbox" style="margin-bottom:0;">
+                                                            <input class="checkbox-input" name="chkAddress" id="chkAddress" placeholder="Enter Address" type="checkbox">
+                                                            <label for="txtAddress">Correspondence Address Same as Business Address</label>
+                                                        </div>
+                                                    </div>
+                                                        
+                                                </div>
+                                                
+                                            
+                                </div>
+                            
+
+                            
+                    <div class="panel-heading">
+                        <div class="panel-title clearfix">
+                            <h4 class="pull-left" style="font-size: 30px;">Director's Information</h4>
+                            
+                            <span class="pull-right">
+                                <button type="button" id="btnAddMore" class="btn btn-labeled btn-success m-b-5">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-plus"></i></span>Add Director
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="top: 0px; position:relative;">
+                        
+
+                        <div id="divOwner" class="clearfix">
+                        <div class=" col-sm-6" style="padding-left:0;">
+                                    <fieldset>
+                                        <h3>Director Details</h3>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtOName">Director Name <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="name[]" id="txtOName" placeholder="Enter Director Name" type="text">
+                                                    <input class="form-control" name="din[]" id="txtDIN" placeholder="Enter DIN" type="hidden">
+                                                    <input class="form-control" name="cibil[]" id="txtCIBIL" placeholder="" type="hidden">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtPAN">PAN No <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="dpan[]" id="txtPAN" placeholder="Enter PAN" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtAadhar">Aadhar No</label>
+                                                    <input class="form-control" name="aadhar[]" id="txtAadhar" placeholder="Enter Aadhar" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtEmail">Contact Email <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="email[]" id="txtEmail" placeholder="Enter Contact Email" type="email">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtMobile">Mobile <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="mobile[]" id="txtMobile" placeholder="Enter Mobile" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtLandline">Home Ph.</label>
+                                                    <input class="form-control" name="landline[]" id="txtLandline" placeholder="Enter Landline" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+
+                                        
+                                        
+                                    </fieldset>
+                                </div>
+
+
+                                
+
+
+                                <div class="col-md-6" style="padding-right:0;">
+                                    <fieldset>
+                                        <h3>Documents</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Document Name</th>
+                                                        <th>Status</th>
+                                                        <th style="text-align: center;">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Pan Card</td>
+                                                        <td>Pending</td>
+                                                        <td style="text-align: center; position: relative;">
+                                                            <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                            <input type="file" name="Pan-0" id="txtPan" class="txtPan" style="opacity: 0; position: absolute; right: 0; top: 0; width: 100px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Address Proof</td>
+                                                        <td>Pending</td>
+                                                        <td style="text-align: center; position: relative;">
+                                                            <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                            <input type="file" name="Address-0" id="txtAddress" class="txtAddress" style="opacity: 0; position: absolute; right: 0; top: 0; width: 100px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Owner's Photo</td>
+                                                        <td>Pending</td>
+                                                        <td style="text-align: center; position: relative;">
+                                                            <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                            <input type="file" name="Photo-0" id="txtPhoto" class="txtPhoto" style="opacity: 0; position: absolute; right: 0; top: 0; width: 100px;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+
+                        </div> 
+                        <div id="addMore"></div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input name="chkAuthorize" id="chkAuthorize" type="checkbox">
+                                            <label for="txtMobile">I authorize DBC to pull my consumer CIBIL.</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="chkTerms" id="chkTerms" type="checkbox">
+                                            <label for="txtMobile">I agreed to the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy of DCB</a></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+
+
+
+                        
+
+
+                    </div>
+                
+
+
+                
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4 style="font-size:30px;">Business Documents</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="">
+                                                <fieldset>
+                                                    
+                                                     <div class="panel-group" id="accordion">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Company Pan Card</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse1" class="panel-collapse collapse in">
+                                                                <div class="panel-body">
+                                                                    
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Pan Card</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Pan" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Company Address Proof</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse2" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Address Proof</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Address" id="txtPan" style="opacity: 0; position: absolute; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Certificate of Incorporation</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse3" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Certificate</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Incorporation" id="txtPan" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">MSME Declaration</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse4" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Declaration</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="MSME" id="txtPan" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Credit Facilities Declaration</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse5" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>#</th>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td>Declaration</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="Credit" id="txtPan" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Bank Statement</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse6" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="tBank">
+                                                                                <tr>
+                                                                                    <td>Bank Statement</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="BankStatement[]" id="txtBankStatement" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            <tfoot>
+                                                                                <tr>
+                                                                                    <th scope="row" colspan="4">
+                                                                                        <a href="Javascript:;" id="btnBAddMore">Add More</a>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </tfoot>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Financial Statement (Audited)</a>
+                                                            </h4>
+                                                            </div>
+                                                            <div id="collapse7" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Document Name</th>
+                                                                                    <th>Status</th>
+                                                                                    <th style="text-align: center;">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody id="tPL">
+                                                                                <tr>
+                                                                                    <td>PL Statement</td>
+                                                                                    <td>Pending</td>
+                                                                                    <td style="text-align: center; position: relative;">
+                                                                                        <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                                                        <input type="file" name="PL[]" id="txtPL" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;">
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            <tfoot>
+                                                                                <tr>
+                                                                                    <th scope="row" colspan="4"><a href="Javascript:;" id="btnPLAddMore">Add More</a></th>
+                                                                                </tr>
+                                                                            </tfoot>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div> 
+                                                    <button type="submit" name="search" id="search-btn" class="btn btn-primary">Submit</button>
+                                                        
+
+
+
+                                                </fieldset>
+                                            </div>
+                                </div>
+                                </form>
+                            </div>
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        
+
+
+
+
+                    </div> <!-- /.row -->
+                </section> <!-- /.content -->
+            </div> <!-- /.content-wrapper -->
+            <% include ../partials/admin_footer %>
+        </div>
+        <!-- ./wrapper -->
+        <!-- Start Core Plugins
+        =====================================================================-->
+        <!-- jQuery -->
+        <script src="/assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <!-- jquery-ui --> 
+        <script src="/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- lobipanel -->
+        <script src="/assets/plugins/lobipanel/lobipanel.min.js" type="text/javascript"></script>
+        <!-- Pace js -->
+        <script src="/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+        <!-- SlimScroll -->
+        <script src="/assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="/assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+        <!-- AdminBD frame -->
+        <script src="/assets/dist/js/frame.js" type="text/javascript"></script>
+        <!-- End Core Plugins
+        =====================================================================-->
+        <!-- Start Page Lavel Plugins
+        =====================================================================-->
+        <!-- Toastr js -->
+        <script src="/assets/plugins/toastr/toastr.min.js" type="text/javascript"></script>
+        <!-- Sparkline js -->
+        <script src="/assets/plugins/sparkline/sparkline.min.js" type="text/javascript"></script>
+        <!-- Data maps js -->
+        <script src="/assets/plugins/datamaps/d3.min.js" type="text/javascript"></script>
+        <script src="/assets/plugins/datamaps/topojson.min.js" type="text/javascript"></script>
+        <script src="/assets/plugins/datamaps/datamaps.all.min.js" type="text/javascript"></script>
+        <!-- Counter js -->
+        <script src="/assets/plugins/counterup/waypoints.js" type="text/javascript"></script>
+        <script src="/assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+        <!-- Emojionearea -->
+        <script src="/assets/plugins/emojionearea/emojionearea.min.js" type="text/javascript"></script>
+        <!-- Monthly js -->
+        <script src="/assets/plugins/monthly/monthly.js" type="text/javascript"></script>
+        <!-- End Page Lavel Plugins
+        =====================================================================-->
+        <!-- Start Theme label Script
+        =====================================================================-->
+        <!-- Dashboard js -->
+        <script src="/assets/dist/js/dashboard.js" type="text/javascript"></script>
+        <!-- End Theme label Script
+        =====================================================================-->
+        <script>
+            $(document).ready(function () {
+
+
+                $("#name").blur(function() {
+                    var varName = $(this).val().toLowerCase();
+
+                    varName = varName.replace(/ /g, "");
+
+
+                    $("#vemail").val("verifier@" + varName);
+                });
+
+
+
+
+                $("#btnAddMore").click(function() {
+                $('#addMore').append($("#divOwner").html());
+
+
+                
+
+                for(i = 0; i < $(".txtPan").length; i = i + 1) {
+                    $(".txtPan").eq(i).attr("name", $(".txtPan").eq(i).attr("name").replace('Pan-0', 'Pan-'+i));
+                }
+
+                for(i = 0; i < $(".txtAddress").length; i = i + 1) {
+                    $(".txtAddress").eq(i).attr("name", $(".txtAddress").eq(i).attr("name").replace('Address-0', 'Address-'+i));
+                }
+
+                for(i = 0; i < $(".txtPhoto").length; i = i + 1) {
+                    $(".txtPhoto").eq(i).attr("name", $(".txtPhoto").eq(i).attr("name").replace('Photo-0', 'Photo-'+i));
+                }
+            });
+
+                $("#btnBAddMore").click(function() {
+                    $("#tBank").append('<tr><td>Bank Statement</td><td>Pending</td><td style="text-align: center;"><a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a><input type="file" name="BankStatement[]" id="txtPan" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;"></td></tr>');
+                });
+
+
+
+            $("#btnPLAddMore").click(function() {
+                $("#tPL").append('<tr><td>PL Statement</td><td>Pending</td><td style="text-align: center;"><a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a><input type="file" name="PL[]" id="txtPL" style="opacity: 0; position: absolute; top: 0; top: 0; width: 50px; right: 131px; height:34px;"></td></tr>');
+            });
+                "use strict"; // Start of use strict
+
+                // notification
+                setTimeout(function () {
+                    toastr.options = {
+                        closeButton: true,
+                        progressBar: true,
+                        showMethod: 'slideDown',
+                        timeOut: 4000
+//                        positionClass: "toast-top-left"
+                    };
+                    toastr.success('Manage Buyers', 'Welcome to SofoSupply');
+
+                }, 1300);
+                $("#chkAddress").click(function() {
+                if($(this).is(":checked")) {
+                    $("#c-street").val($("#street").val());
+                    $("#c-city").val($("#city").val());
+                    $("#c-state").val($("#state").val());
+                    $("#c-pin").val($("#pin").val());
+                }
+                else {
+                    $("#c-street").val("");
+                    $("#c-city").val("");
+                    $("#c-state").val("");
+                    $("#c-pin").val("");
+                }
+            });
+            });
+        </script>
+        
+<style>
+    .sidebar-mini .panel-bd > form{ padding: 20px;}
+    .sidebar-mini .panel-bd > .form-group{ padding: 0 20px;}
+    .sidebar-mini .panel-bd > .panel-heading{
+         position: relative;
+         top: 0px;
+         background: transparent none repeat scroll 0 0;
+    }
+    .sidebar-mini .panel-bd .panel-heading::before{ display: none;}
+    .input-group-addon:first-child {
+        border-radius: 0;
+        border-right: 0 none;
+    }
+</style>
+
+</body>
+</html>

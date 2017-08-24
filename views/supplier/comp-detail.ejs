@@ -1,0 +1,480 @@
+<% include ../partials/top %>
+
+<body>
+
+    <% include ../partials/header %>
+    
+ <div class="banner-area">
+ 	
+    <div class="container">
+   		<div class="row form-pannel">
+                        <!-- Form controls -->
+                        <div class="col-sm-12">
+
+
+
+                            <span class="steps"><img src="images/step 1.png" alt="imag" title="imagessteps"></span>
+
+
+
+                            <div class="panel panel-bd">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <h4>Business Information</h4>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <form action="/supplier/completeRegistration" method="post" class="form1">
+
+                                    <div class="row clearfix">
+                                    <div class="col-sm-12">
+                                        <div class="mb">
+                                                <fieldset>
+                                                    <h3>Business Details</h3>
+                                                    
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtBName">Business Name <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="companyName" id="companyName" placeholder="Enter Business Name" type="text" value="<%=accData.supplierName%>">
+                                                                <input type="hidden" name="hCompany" id="hCompany" value="" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtCIN">CIN <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="cin" id="cin" placeholder="Enter CIN" type="text" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="cmbTypeBusiness">Type of Business Entity <span class="mandatory">*</span></label>
+                                                                <select class="form-control" name="businessType" id="businessType" required>
+                                                                    <option value="Sole Proprietorship">Sole Proprietorship</option>
+                                                                    <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                                                                    <option value="Public Limited Company">Public Limited Company</option>
+                                                                    <option value="Privately Held Company">Privately Held Company</option>
+                                                                    <option value="Private Company Limited by Shares">Private Company Limited by Shares</option>
+                                                                    <option value="Unlimited Company">Unlimited Company</option>
+                                                                    <option value="Subsidiary">Subsidiary</option>
+                                                                    <option value="Joint Venture">Joint Venture</option>
+                                                                    <option value="Joint Venture">Joint-Stock Company</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="cmbTypeIndustry">Type of Industry <span class="mandatory">*</span></label>
+                                                                <select class="form-control" name="industryType" id="industryType" required>
+                                                                    <option value="Agriculture">Agriculture</option>
+                                                                    <option value="Automobiles">Automobiles</option>
+                                                                    <option value="Auto Components">Auto Components</option>
+                                                                    <option value="Aviation">Aviation</option>
+                                                                    <option value="Banking">Banking</option>
+                                                                    <option value="Biotechnology">Biotechnology</option>
+                                                                    <option value="Cement">Cement</option>
+                                                                    <option value="Consumer Markets">Consumer Markets</option>
+                                                                    <option value="Education and Training">Education and Training</option>
+                                                                    <option value="Engineering">Engineering</option>
+                                                                    <option value="Financial Services">Financial Services</option>
+                                                                    <option value="Food Processing">Food Processing</option>
+                                                                    <option value="Gems and Jewellery">Gems and Jewellery</option>
+                                                                    <option value="Healthcare">Healthcare</option>
+                                                                    <option value="Infrastructure">Infrastructure</option>
+                                                                    <option value="Insurance">Insurance</option>
+                                                                    <option value="IT & ITeS">IT & ITeS</option>
+                                                                    <option value="Manufacturing">Manufacturing</option>
+                                                                    <option value="Media and Entertainment">Media and Entertainment</option>
+                                                                    <option value="Oil and Gas">Oil and Gas</option>
+                                                                    <option value="Pharmaceuticals">Pharmaceuticals</option>
+                                                                    <option value="Real Estate">Real Estate</option>
+                                                                    <option value="Research and Development">Research and Development</option>
+                                                                    <option value="Retail">Retail</option>
+                                                                    <option value="Science and Technology">Science and Technology</option>
+                                                                    <option value="Semiconductor">Semiconductor</option>
+                                                                    <option value="Services">Services</option>
+                                                                    <option value="Steel">Steel</option>
+                                                                    <option value="Telecommunications">Telecommunications</option>
+                                                                    <option value="Textiles">Textiles</option>
+                                                                    <option value="Agriculture">Tourism and Hospitality</option>
+                                                                    <option value="Agriculture">Urban Market</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtEmail">Business Email <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="txtEmail" id="txtEmail" placeholder="Enter Contact Email" type="email" value="<%=accData.emailId%>" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtMobile">Mobile <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="txtMobile" id="txtMobile" placeholder="Enter Mobile" type="text" value="<%=accInfo.phoneNumber%>" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtLandline">Landline</label>
+                                                                <input class="form-control" name="landline" id="landline" placeholder="Enter Landline" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="txtCIN">Business PAN <span class="mandatory">*</span></label>
+                                                                <input class="form-control" name="pan" id="pan" placeholder="Enter PAN" type="text" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb">
+                                                    <fieldset>
+                                                        <h3>Business Address</h3>
+                                                        <div class="form-group">
+                                                            <label for="txtAddress">Address <span class="mandatory">*</span></label>
+                                                            <input class="form-control" name="street" id="street" placeholder="Enter Address" type="text" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="txtCity">City <span class="mandatory">*</span></label>
+                                                            <input class="form-control" name="city" id="city" placeholder="Enter City" type="text" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="txtState">State <span class="mandatory">*</span></label>
+                                                            <select name="state" id="state" class="form-control" required>
+                                                                <option value="">Select state</option>
+                                                                <option value="ANDAMAN &amp; NICOBAR ISLANDS">ANDAMAN &amp; NICOBAR ISLANDS</option>
+                                                                <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                                                                <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                                                <option value="ASSAM">ASSAM</option>
+                                                                <option value="BIHAR">BIHAR</option>
+                                                                <option value="CHANDIGARH">CHANDIGARH</option>
+                                                                <option value="CHHATTISGARH">CHHATTISGARH</option>
+                                                                <option value="DADRA &amp; NAGAR HAVELI">DADRA &amp; NAGAR HAVELI</option>
+                                                                <option value="DAMAN &amp; DIU">DAMAN &amp; DIU</option>
+                                                                <option value="National Capital Territory of Delhi">DELHI</option>
+                                                                <option value="GOA">GOA</option>
+                                                                <option value="GUJARAT">GUJARAT</option>
+                                                                <option value="HARYANA">HARYANA</option>
+                                                                <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                                                                <option value="JAMMU &amp; KASHMIR">JAMMU &amp; KASHMIR</option>
+                                                                <option value="JHARKHAND">JHARKHAND</option>
+                                                                <option value="KARNATAKA">KARNATAKA</option>
+                                                                <option value="KERALA">KERALA</option>
+                                                                <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                                                                <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                                                                <option value="MAHARASHTRA">MAHARASHTRA</option>
+                                                                <option value="MANIPUR">MANIPUR</option>
+                                                                <option value="MEGHALAYA">MEGHALAYA</option>
+                                                                <option value="MIZORAM">MIZORAM</option>
+                                                                <option value="NAGALAND">NAGALAND</option>
+                                                                <option value="ODISHA">ODISHA</option>
+                                                                <option value="PUDUCHERRY">PUDUCHERRY</option>
+                                                                <option value="PUNJAB">PUNJAB</option>
+                                                                <option value="RAJASTHAN">RAJASTHAN</option>
+                                                                <option value="SIKKIM">SIKKIM</option>
+                                                                <option value="TAMIL NADU">TAMIL NADU</option>
+                                                                <option value="TELANGANA">TELANGANA</option>
+                                                                <option value="TRIPURA">TRIPURA</option>
+                                                                <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                                                                <option value="UTTARAKHAND">UTTARAKHAND</option>
+                                                                <option value="WEST BENGAL">WEST BENGAL</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="txtZip">Pin Code <span class="mandatory">*</span></label>
+                                                            <input class="form-control" name="pin" id="pin" placeholder="Enter Pin Code" type="text" required>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-6 mb">
+                                                <fieldset>
+                                                    <h3>Correspondence Address</h3>
+                                                    <div class="form-group">
+                                                        <label for="txtAddress">Address <span class="mandatory">*</span></label>
+                                                        <input class="form-control" name="c_street" id="c-street" placeholder="Enter Address" type="text" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="txtCity">City <span class="mandatory">*</span></label>
+                                                        <input class="form-control" name="c_city" id="c-city" placeholder="Enter City" type="text" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="txtState">State <span class="mandatory">*</span></label>
+                                                        <select name="c_state" id="c-state" class="form-control" required>
+                                                            <option value="">Select state</option>
+                                                            <option value="ANDAMAN &amp; NICOBAR ISLANDS">ANDAMAN &amp; NICOBAR ISLANDS</option>
+                                                            <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                                                            <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                                                            <option value="ASSAM">ASSAM</option>
+                                                            <option value="BIHAR">BIHAR</option>
+                                                            <option value="CHANDIGARH">CHANDIGARH</option>
+                                                            <option value="CHHATTISGARH">CHHATTISGARH</option>
+                                                            <option value="DADRA &amp; NAGAR HAVELI">DADRA &amp; NAGAR HAVELI</option>
+                                                            <option value="DAMAN &amp; DIU">DAMAN &amp; DIU</option>
+                                                            <option value="National Capital Territory of Delhi">DELHI</option>
+                                                            <option value="GOA">GOA</option>
+                                                            <option value="GUJARAT">GUJARAT</option>
+                                                            <option value="HARYANA">HARYANA</option>
+                                                            <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                                                            <option value="JAMMU &amp; KASHMIR">JAMMU &amp; KASHMIR</option>
+                                                            <option value="JHARKHAND">JHARKHAND</option>
+                                                            <option value="KARNATAKA">KARNATAKA</option>
+                                                            <option value="KERALA">KERALA</option>
+                                                            <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                                                            <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                                                            <option value="MAHARASHTRA">MAHARASHTRA</option>
+                                                            <option value="MANIPUR">MANIPUR</option>
+                                                            <option value="MEGHALAYA">MEGHALAYA</option>
+                                                            <option value="MIZORAM">MIZORAM</option>
+                                                            <option value="NAGALAND">NAGALAND</option>
+                                                            <option value="ODISHA">ODISHA</option>
+                                                            <option value="PUDUCHERRY">PUDUCHERRY</option>
+                                                            <option value="PUNJAB">PUNJAB</option>
+                                                            <option value="RAJASTHAN">RAJASTHAN</option>
+                                                            <option value="SIKKIM">SIKKIM</option>
+                                                            <option value="TAMIL NADU">TAMIL NADU</option>
+                                                            <option value="TELANGANA">TELANGANA</option>
+                                                            <option value="TRIPURA">TRIPURA</option>
+                                                            <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                                                            <option value="UTTARAKHAND">UTTARAKHAND</option>
+                                                            <option value="WEST BENGAL">WEST BENGAL</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="txtZip">Pin Code <span class="mandatory">*</span></label>
+                                                        <input class="form-control" name="c_pin" id="c-pin" placeholder="Enter Pin Code" type="text" required>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+
+
+                                            </div>
+
+
+
+
+                                                <div class="col-sm-6">
+                                           		
+                                                    <div class="col-md-">
+                                                        <div class="form-group clon-checkbox">
+                                                            <input class="checkbox-input" name="chkAddress" id="chkAddress" placeholder="Enter Address" type="checkbox">
+                                                            <label for="txtAddress">Correspondence Address Same as Business Address</label>
+                                                        </div>
+                                                    </div>
+                                                        
+                                                </div>
+                                                <div class="text-right">
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                            </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+   </div>
+
+
+
+
+ </div>
+ 
+ <div class="where-are-you">
+ 	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-4">
+            	<figure>
+                	<img src="images/localtion.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4">
+            	<figure>
+                	<img src="images/thousend.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4">
+            	<figure>
+                	<img src="images/lock.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+
+
+    <% include ../partials/footer %>
+
+
+
+
+
+    <% include ../partials/bottom %>
+
+
+    <style>
+        .hideShowPassword-wrapper {
+            width: 100% !important;
+        }
+        .mandatory-txt {
+            color: #ff0000;
+            float: left;
+        }
+        .mandatory {
+            color: #ff0000;
+        }
+        #phone {
+            float: left;
+            margin-left: 64px;
+            margin-top: -33px;
+            width: 89%;
+        }
+    </style>
+    
+    <script>
+        $(document).ready(function () {
+
+            console.log("Hello");
+
+            $("#state").val("<%=accInfo.state%>");
+
+
+            $.get("https://data.gov.in/api/datastore/resource.json?resource_id=7502bd54-2f04-43a5-ae40-437628b0145a&api-key=8f16543fe5d2b4558223e29c2da31b08&filters[COMPANYNAME]="+$("#companyName").val()+"&fields=COMPANYNAME,REGISTEREDOFFICEADDRESS,CORPORATEIDENTIFICATIONNUMBER,DATEOFREGISTRATION,COMPANYCATEGORY,AUTHORIZEDCAPITAL,PAIDUPCAPITAL,COMPANYSTATUS,PRINCIPALBUSINESSACTIVITY,REGISTRAROFCOMPANIES,SUBCATEGORY", function (response) {
+                if(response.count>0) {
+                    $("#street").val(response.records[0]["REGISTEREDOFFICEADDRESS"]);
+                    $("#cin").val(response.records[0]["CORPORATEIDENTIFICATIONNUMBER"]);
+
+
+                    varPin = (response.records[0]["REGISTEREDOFFICEADDRESS"]).split(" ");
+                    varP = varPin[(varPin.length - 1)];
+                    $("#pin").val(varP);
+
+                    txtCompany = "The Company, <strong>"+response.records[0]["COMPANYNAME"]+"</strong>, Incorporated on <strong>"+response.records[0]["DATEOFREGISTRATION"]+"</strong>,";
+                    txtCompany = txtCompany + " having its registered office at <strong>'"+response.records[0]["REGISTEREDOFFICEADDRESS"];
+                    txtCompany = txtCompany + "'</strong>, Registered with <strong>"+response.records[0]["REGISTRAROFCOMPANIES"]+"</strong> is a <strong>"+response.records[0]["COMPANYCATEGORY"]+"</strong> <strong>"+response.records[0]["SUBCATEGORY"]+"</strong>,";
+                    txtCompany = txtCompany + " with an authorised capital and paid up capital of <strong>"+response.records[0]["AUTHORIZEDCAPITAL"]+"</strong> and <strong>"+response.records[0]["PAIDUPCAPITAL"]+"</strong> respectively.";
+                    txtCompany = txtCompany + "The current status of the Company is <strong>"+response.records[0]["COMPANYSTATUS"]+"</strong> and its Principal business activity is <strong>"+response.records[0]["PRINCIPALBUSINESSACTIVITY"]+"</strong>";
+                    $("#hCompany").val(txtCompany);
+                }
+            }, "json");
+
+
+            $("#cin").blur(function() {
+                $.get("https://data.gov.in/api/datastore/resource.json?resource_id=7502bd54-2f04-43a5-ae40-437628b0145a&api-key=8f16543fe5d2b4558223e29c2da31b08&filters[CORPORATEIDENTIFICATIONNUMBER]="+$("#cin").val()+"&fields=COMPANYNAME,REGISTEREDOFFICEADDRESS,CORPORATEIDENTIFICATIONNUMBER,DATEOFREGISTRATION,COMPANYCATEGORY,AUTHORIZEDCAPITAL,PAIDUPCAPITAL,COMPANYSTATUS,PRINCIPALBUSINESSACTIVITY,REGISTRAROFCOMPANIES,SUBCATEGORY", function (response) {
+                    if(response.count>0) {
+                        $("#companyName").val(response.records[0]["COMPANYNAME"]);
+                        $("#street").val(response.records[0]["REGISTEREDOFFICEADDRESS"]);
+
+
+
+                        varPin = (response.records[0]["REGISTEREDOFFICEADDRESS"]).split(" ");
+                        varP = varPin[(varPin.length - 1)];
+                        $("#pin").val(varP);
+
+
+
+                        txtCompany = "The Company, <strong>"+response.records[0]["COMPANYNAME"]+"</strong>, Incorporated on <strong>"+response.records[0]["DATEOFREGISTRATION"]+"</strong>,";
+                        txtCompany = txtCompany + " having its registered office at <strong>'"+response.records[0]["REGISTEREDOFFICEADDRESS"];
+                        txtCompany = txtCompany + "'</strong>, Registered with <strong>"+response.records[0]["REGISTRAROFCOMPANIES"]+"</strong> is a <strong>"+response.records[0]["COMPANYCATEGORY"]+"</strong> <strong>"+response.records[0]["SUBCATEGORY"]+"</strong>,";
+                        txtCompany = txtCompany + " with an authorised capital and paid up capital of <strong>"+response.records[0]["AUTHORIZEDCAPITAL"]+"</strong> and <strong>"+response.records[0]["PAIDUPCAPITAL"]+"</strong> respectively.";
+                        txtCompany = txtCompany + "The current status of the Company is <strong>"+response.records[0]["COMPANYSTATUS"]+"</strong> and its Principal business activity is <strong>"+response.records[0]["PRINCIPALBUSINESSACTIVITY"]+"</strong>";
+                        $("#hCompany").val(txtCompany);
+
+
+
+
+                    }
+                }, "json");
+            });
+
+            $("#companyName").blur(function() {
+                $.get("https://data.gov.in/api/datastore/resource.json?resource_id=7502bd54-2f04-43a5-ae40-437628b0145a&api-key=8f16543fe5d2b4558223e29c2da31b08&filters[COMPANYNAME]="+$("#companyName").val()+"&fields=COMPANYNAME,REGISTEREDOFFICEADDRESS,CORPORATEIDENTIFICATIONNUMBER,DATEOFREGISTRATION,COMPANYCATEGORY,AUTHORIZEDCAPITAL,PAIDUPCAPITAL,COMPANYSTATUS,PRINCIPALBUSINESSACTIVITY,REGISTRAROFCOMPANIES,SUBCATEGORY", function (response) {
+                    if(response.count>0) {
+                        $("#companyName").val(response.records[0]["COMPANYNAME"]);
+                        $("#street").val(response.records[0]["REGISTEREDOFFICEADDRESS"]);
+                        $("#cin").val(response.records[0]["CORPORATEIDENTIFICATIONNUMBER"]);
+
+
+
+                        varPin = (response.records[0]["REGISTEREDOFFICEADDRESS"]).split(" ");
+                        varP = varPin[(varPin.length - 1)];
+                        $("#pin").val(varP);
+
+
+
+                        txtCompany = "The Company, <strong>"+response.records[0]["COMPANYNAME"]+"</strong>, Incorporated on <strong>"+response.records[0]["DATEOFREGISTRATION"]+"</strong>,";
+                        txtCompany = txtCompany + " having its registered office at <strong>'"+response.records[0]["REGISTEREDOFFICEADDRESS"];
+                        txtCompany = txtCompany + "'</strong>, Registered with <strong>"+response.records[0]["REGISTRAROFCOMPANIES"]+"</strong> is a <strong>"+response.records[0]["COMPANYCATEGORY"]+"</strong> <strong>"+response.records[0]["SUBCATEGORY"]+"</strong>,";
+                        txtCompany = txtCompany + " with an authorised capital and paid up capital of <strong>"+response.records[0]["AUTHORIZEDCAPITAL"]+"</strong> and <strong>"+response.records[0]["PAIDUPCAPITAL"]+"</strong> respectively.";
+                        txtCompany = txtCompany + "The current status of the Company is <strong>"+response.records[0]["COMPANYSTATUS"]+"</strong> and its Principal business activity is <strong>"+response.records[0]["PRINCIPALBUSINESSACTIVITY"]+"</strong>";
+                        $("#hCompany").val(txtCompany);
+
+
+
+
+                    }
+                }, "json");
+            });
+
+
+            $("#chkAddress").click(function() {
+                if($(this).is(":checked")) {
+                    $("#c-street").val($("#street").val());
+                    $("#c-city").val($("#city").val());
+                    $("#c-state").val($("#state").val());
+                    $("#c-pin").val($("#pin").val());
+                }
+                else {
+                    $("#c-street").val("");
+                    $("#c-city").val("");
+                    $("#c-state").val("");
+                    $("#c-pin").val("");
+                }
+            });
+
+
+
+
+
+        });
+    </script>
+
+
+
+
+</body>
+</html>

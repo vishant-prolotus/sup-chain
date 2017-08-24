@@ -1,0 +1,73 @@
+
+
+@media only screen and (max-width: 999px) {
+	.container{ width:100%;}
+	.fullscreen-bg{ position:relative;}
+	.five-sec-area > ul > li > a > img{ display:block; width:100%;}
+	.footer .footer-left{ padding-left:5%;}
+}
+
+@media only screen and (max-width: 901px) {
+	.container{ width:95%;}
+	.navbar-nav > li > a{ padding-left:6px; padding-right:6px;}
+	.navbar-brand > img{ width:100%;}
+	.footer .footer-left{ padding-left:5%;}
+	.footer-nav{ padding-left:0; padding-right:0;}
+	.footer-nav .navbar-nav > li > a{ font-size:9px;}
+
+}
+
+@media only screen and (max-width: 780px) {
+	.navbar-nav > li > a{ font-size:12px;}
+}
+
+@media only screen and (max-width: 768px) {
+	#bs-navbar{ 
+		background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+		margin-top: 38px;
+		padding-top:0;
+	}
+	.nav > li{ border-bottom:1px solid #ddd; padding-left:15px;}
+	.five-sec-area > ul > li > p > span{ font-size:15px;}
+	.global-area > h1{font-size: 7vw;}
+	.global-area > p{ width:100%;}
+	.map-area{ float:none !important; padding-bottom:15px; padding-top:0;}
+	.footer-nav > ul{ padding-left:10px;}
+	.footer-nav .navbar-nav > li > a{ padding-bottom:0; font-size:12px; padding-top:10px;}
+}
+
+@media only screen and (max-width: 767px) {
+	.footer .footer-left{ padding-left:5%; width:100%; float:none;}
+	.footer > div{ float:none; width:100%; padding:4px 22px;}
+	.navbar-nav > li > a:hover{ color:#ccc;}
+}
+
+
+@media only screen and (max-width: 660px) {
+#bs-navbar{ margin-top:10px;}
+.navbar-brand{ width:200px;}
+.fullscreen-bg > span{ width:50px;}	
+.fullscreen-bg > span > img{ width:100%;}
+.global-area{ padding-top:40px; padding-bottom:40px;}
+.global-area > h1{ margin:0 0 17px;}
+.global-area > p{ font-size:12px;}
+.footer .footer-addres1 > p{ font-size:12px;}
+.footer .footer-addres > p{ font-size:12px;}
+.footer-logo .left-logo{ width:200px;}
+.footer .footer-addres1{ margin-bottom:20px;}
+.last-footer{ overflow:hidden;}
+.footer > div{ padding-bottom:0;}
+
+}
+
+@media only screen and (max-width: 480px) {
+.five-sec-area > ul{ display:block;}
+.five-sec-area > ul > li{ flex:inherit; width:100%; margin-bottom:15px; margin-right:0;}	
+.five-sec-area > ul > li > a > img{ width:100%;}
+.five-sec-area > ul > li > p > span{ font-size: 7vw;}
+}
+
+@media only screen and (max-width: 360px) {
+.left-logo > a > img{ width:85%;}
+.footer-logo .right-social{ margin-top:15px;}	
+}

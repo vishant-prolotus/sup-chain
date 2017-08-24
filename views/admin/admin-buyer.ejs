@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SofoSupply - Manage Buyers</title>
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="assets/dist/img/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/dist/img/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/dist/img/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/dist/img/ico/apple-touch-icon-144-precomposed.png">
+
+        <!-- Start Global Mandatory Style
+        =====================================================================-->
+        <!-- jquery-ui css -->
+        <link href="/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap rtl -->
+        <!--<link href="/assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
+        <!-- Lobipanel css -->
+        <link href="/assets/plugins/lobipanel/lobipanel.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pace css -->
+        <link href="/assets/plugins/pace/flash.css" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pe-icon -->
+        <link href="/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css"/>
+        <!-- Themify icons -->
+        <link href="/assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css"/>
+        <!-- End Global Mandatory Style
+        =====================================================================-->
+        <!-- Start page Label Plugins 
+        =====================================================================-->
+        <!-- Toastr css -->
+        <link href="/assets/plugins/toastr/toastr.css" rel="stylesheet" type="text/css"/>
+        <!-- Emojionearea -->
+        <link href="assets/plugins/emojionearea/emojionearea.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Monthly css -->
+        <link href="/assets/plugins/monthly/monthly.css" rel="stylesheet" type="text/css"/>
+        <!-- End page Label Plugins 
+        =====================================================================-->
+        <!-- Start Theme Layout Style
+        =====================================================================-->
+        <!-- Theme style -->
+        <link href="/assets/dist/css/styleBD.css" rel="stylesheet" type="text/css"/>
+        <!-- Theme style rtl -->
+        <!--<link href="/assets/dist/css/styleBD-rtl.css" rel="stylesheet" type="text/css"/>-->
+        <!-- End Theme Layout Style
+        =====================================================================-->
+        <link href="/assets/plugins/datatables/dataTables.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+<body class="hold-transition sidebar-mini">
+
+
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            <% include ../partials/admin_header %>
+            <!-- =============================================== -->
+            <!-- Left side column. contains the sidebar -->
+            <% include ../partials/admin_left %>
+            <!-- =============================================== -->
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="header-icon">
+                        <i class="pe-7s-world"></i>
+                    </div>
+                    <div class="header-title">
+                        <h1>SofoSupply - Manage Buyers</h1>
+                        <small>You can add, edit and delete buyers.</small>
+                        <ol class="breadcrumb">
+                            <li><a href="/admin"><i class="pe-7s-home"></i> Home</a></li>
+                            <li class="active">Dashboard</li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    
+                    <div class="row">
+                        
+                        
+                        <div >
+                            <div class="panel panel-bd">
+                                <div class="panel-heading">
+                                    <div class="panel-title clearfix">
+                                        <h4 class="pull-left">Buyers</h4>
+                                        <a href="/admin/addBuyer" class="btn btn-sm btn-primary pull-right" style="color:#fff;">Add Buyer</a>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table id="dataTableExample2" class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <!--<th>ID</th>-->
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for (var i=0; i<data.length; i++) { %>
+                                                    <tr>
+                                                        <!--<td><%=data[i].userId%></td>-->
+                                                        <td><a href="/buyer/buyer-detail?id=<%=data[i].userId%>&by=admin"><%=data[i].name%></a></td>
+                                                        <td><%=data[i].email%></td>
+                                                        <td>
+                                                            <a href="/buyer/buyer-detail?id=<%=data[i].userId%>&by=admin"><button type="button" class="btn btn-success btn-circle m-b-5"><i class="glyphicon glyphicon-eye-open"></i></button></a>
+                                                            <a href="/buyer/buyer-detail?id=<%=data[i].userId%>&by=admin"><button type="button" class="btn btn-primary btn-circle m-b-5"><i class="glyphicon glyphicon-pencil"></i></button></a>
+                                                            <a href="/admin/email"><button type="button" class="btn btn-warning btn-circle m-b-5"><i class="glyphicon glyphicon-envelope"></i></button></a>
+                                                        </td>
+                                                    </tr>
+                                                <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+
+                    </div> <!-- /.row -->
+                </section> <!-- /.content -->
+            </div> <!-- /.content-wrapper -->
+            <% include ../partials/admin_footer %>
+        </div>
+        <!-- ./wrapper -->
+        <!-- Start Core Plugins
+        =====================================================================-->
+        <!-- jQuery -->
+        <script src="/assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <!-- jquery-ui --> 
+        <script src="/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- lobipanel -->
+        <script src="/assets/plugins/lobipanel/lobipanel.min.js" type="text/javascript"></script>
+        <!-- Pace js -->
+        <script src="/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+        <!-- SlimScroll -->
+        <script src="/assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="/assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+        <!-- AdminBD frame -->
+        <script src="/assets/dist/js/frame.js" type="text/javascript"></script>
+        <!-- End Core Plugins
+        =====================================================================-->
+        <!-- Start Page Lavel Plugins
+        =====================================================================-->
+        <!-- Toastr js -->
+        <script src="/assets/plugins/toastr/toastr.min.js" type="text/javascript"></script>
+        <!-- Sparkline js -->
+        <script src="/assets/plugins/sparkline/sparkline.min.js" type="text/javascript"></script>
+        <!-- Data maps js -->
+        <script src="/assets/plugins/datamaps/d3.min.js" type="text/javascript"></script>
+        <script src="/assets/plugins/datamaps/topojson.min.js" type="text/javascript"></script>
+        <script src="/assets/plugins/datamaps/datamaps.all.min.js" type="text/javascript"></script>
+        <!-- Counter js -->
+        <script src="/assets/plugins/counterup/waypoints.js" type="text/javascript"></script>
+        <script src="/assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+        <!-- Emojionearea -->
+        <script src="/assets/plugins/emojionearea/emojionearea.min.js" type="text/javascript"></script>
+        <!-- Monthly js -->
+        <script src="/assets/plugins/monthly/monthly.js" type="text/javascript"></script>
+        <!-- End Page Lavel Plugins
+        =====================================================================-->
+        <!-- Start Theme label Script
+        =====================================================================-->
+        <!-- Dashboard js -->
+        <script src="/assets/dist/js/dashboard.js" type="text/javascript"></script>
+        <!-- End Theme label Script
+        =====================================================================-->
+        <script src="/assets/plugins/datatables/dataTables.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+
+
+                $("#dataTableExample2").DataTable({
+                    dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",
+                    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                    buttons: [
+                        {extend: 'copy', className: 'btn-sm'},
+                        {extend: 'csv', title: 'ExampleFile', className: 'btn-sm'},
+                        {extend: 'excel', title: 'ExampleFile', className: 'btn-sm'},
+                        {extend: 'pdf', title: 'ExampleFile', className: 'btn-sm'},
+                        {extend: 'print', className: 'btn-sm'}
+                    ]
+                });
+
+
+                $("#btnBAddMore").click(function() {
+                $("#tBank").append('<tr><td>Bank Statement</td><td>Pending</td><td style="text-align: center;"><a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a><input type="file" name="BankStatement[]" id="txtPan"></td></tr>');
+            });
+
+
+            $("#btnPLAddMore").click(function() {
+                $("#tPL").append('<tr><td>PL Statement</td><td>Pending</td><td style="text-align: center;"><a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a><input type="file" name="PL[]" id="txtPL"></td></tr>');
+            });
+
+
+
+
+            });
+        </script>
+        
+
+
+</body>
+</html>

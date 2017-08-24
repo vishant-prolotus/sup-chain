@@ -1,0 +1,30 @@
+<% include ../partials/top %>
+
+<body>
+
+    <form name="frmAadhaar" id="frmAadhaar" method="post" action="https://api.aadhaarbridge.com/preprod/_init">
+        <input type="hidden" name="saCode" value="<%=saCode%>" >
+        <input type="hidden" name="aadhaarId" id="aadhaarId" value="<%=aadhaarId%>" >
+        <input type="hidden" name="requestId" value="<%=requestId%>" >
+        <input type="hidden" name="purpose" value="Online ekyc" >
+        <input type="hidden" name="modality" value="otp" >
+        <input type="hidden" name="successUrl" value="http://localhost:3202/supplier/aadhaar-kyc/success">
+        <input type="hidden" name="failureUrl" value="http://localhost:3202/supplier/aadhaar-kyc/failed" >
+        <input type="hidden" name="hash" value="<%=hash%>" >
+    </form >
+
+
+
+    <% include ../partials/bottom %>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#frmAadhaar").submit();
+
+        });
+    </script>
+
+</body>
+</html>

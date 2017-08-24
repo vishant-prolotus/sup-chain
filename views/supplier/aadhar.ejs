@@ -1,0 +1,33 @@
+<% include ../partials/top %>
+
+<body>
+
+    <form name="frmAadhaar" id="frmAadhaar" method="post" action="/supplier/get-aadhaarauth">
+        <input type="hidden" name="saCode" value="955d29" >
+        <input type="hidden" name="aadhaarId" id="aadhaarId" value="" >
+        <input type="hidden" name="requestId" value="8888888888888" >
+        <input type="hidden" name="purpose" value="Online ekyc" >
+        <input type="hidden" name="modality" value="otp" >
+        <input type="hidden" name="successUrl" value="http://localhost:3202">
+        <input type="hidden" name="failureUrl" value="http://localhost:3202" >
+        <input type="hidden" name="hash" value="" >
+    </form >
+
+
+
+    <% include ../partials/bottom %>
+
+
+    <script>
+        $(document).ready(function () {
+            varAadhaar = window.opener.$("#txtAadhar").val();
+            $("#aadhaarId").val(varAadhaar);
+
+
+            $("#frmAadhaar").submit();
+
+        });
+    </script>
+
+</body>
+</html>

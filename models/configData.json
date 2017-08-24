@@ -1,0 +1,6 @@
+{
+    "currency":"INR",
+    "tax":0,
+    "timeout":500,
+    "invoiceStatusTimeout":800
+}

@@ -1,0 +1,56 @@
+<header class="main-header"> 
+    <a href="/bank" class="logo"> <!-- Logo -->
+        <span class="logo-mini">
+            <!--<b>A</b>BD-->
+            <img src="/sofocle.png" alt="" width="200">
+        </span>
+        <span class="logo-lg">
+            <!--<b>Admin</b>BD-->
+            <img src="/sofocle.png" alt="" width="200">
+        </span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"> <!-- Sidebar toggle button-->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="pe-7s-keypad"></span>
+        </a>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- Notifications -->
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                        <% if(notifydoc.count>0) { %>
+                            <span id="notiCount" class="label label-success"><%=notifydoc.count%></span>
+                        <% } %>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have <%=notifydoc.notifications.length%> notifications</li>
+                        <li>
+                            <ul class="menu">
+                                <% for(i = (notifydoc.notifications.length - 1); i >= 0 ; i = i - 1) { %>
+                                    <li><a href="#"><i class="ti-announcement color-green"></i> <%=notifydoc.notifications[i]%> </a></li>
+                                <% } %>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- settings -->
+                <li class="dropdown dropdown-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="pe-7s-settings"></i></a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a href="profile.html"><i class="pe-7s-users"></i> User Profile</a></li>-->
+                        <li><a href="/bank/settings"><i class="pe-7s-settings"></i> Settings</a></li>
+                        <li><a href="/admin/logout"><i class="pe-7s-key"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<style>
+    .main-header .logo .logo-lg img, .main-header .logo .logo-mini img {
+        height: auto !important;
+    }
+</style>

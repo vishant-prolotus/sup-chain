@@ -1,0 +1,307 @@
+<% include ../partials/top %>
+
+<body>
+
+    <% include ../partials/header %>
+    
+ <div class="banner-area">
+ 	
+    <div class="container">
+        <div class="row form-pannel">
+            <!-- Form controls -->
+            <div class="col-sm-12">
+
+                <span class="steps"><img src="images/step 2.png" alt="imag" title="imagessteps"/></span>
+
+
+                <div class="panel panel-bd">
+                    <div class="panel-heading">
+                        <div class="panel-title clearfix">
+                            <h4 class="pull-left">Director's Information</h4>
+                            
+                            <span class="pull-right">
+                                <button type="button" id="btnAddMore" class="btn btn-labeled btn-success m-b-5">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-plus"></i></span>Add Director
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="top: -23px; position:relative;">
+                        <form name="frmOwner" id="frmOwner" action="/supplier/uploadEmployeeDocs" method="post" enctype="multipart/form-data" class="form1">
+
+                        <div id="divOwner" class="">
+                        <div class="col-md-6">
+                                    <fieldset>
+                                        <h3>Director Details</h3>
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtOName">Director Name <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="name[]" id="txtOName" placeholder="Enter Director Name" type="text">
+                                                    <input class="form-control" name="din[]" id="txtDIN" placeholder="Enter DIN" type="hidden">
+                                                    <input class="form-control" name="cibil[]" id="txtCIBIL" placeholder="" type="hidden">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtPAN">PAN No <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="dpan[]" id="txtPAN" placeholder="Enter PAN" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtAadhar">Aadhar No</label>
+                                                    <input class="form-control" name="aadhar[]" id="txtAadhar" placeholder="Enter Aadhar" type="text">
+                                                    <label><a href="Javascript:;" id="verfiyAadhaar">Verify Aadhaar</a></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtEmail">Contact Email <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="email[]" id="txtEmail" placeholder="Enter Contact Email" type="email">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtMobile">Mobile <span class="mandatory">*</span></label>
+                                                    <input class="form-control" name="mobile[]" id="txtMobile" placeholder="Enter Mobile" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                
+                                                <div class="form-group">
+                                                    <label for="txtLandline">Home Ph.</label>
+                                                    <input class="form-control" name="landline[]" id="txtLandline" placeholder="Enter Landline" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+
+                                        
+                                        
+                                    </fieldset>
+                                </div>
+
+
+                                
+
+
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <h3>Documents</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Document Name</th>
+                                                        <th>Status</th>
+                                                        <th style="text-align: center;">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Pan Card</td>
+                                                        <td>Pending</td>
+                                                        <td style="text-align: center; position: relative;">
+                                                            <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                            <input type="file" name="Pan-0" id="txtPan" class="txtPan" style="opacity: 0; position: absolute; right: 0; top: 0; width: 100px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Address Proof</td>
+                                                        <td>Pending</td>
+                                                        <td style="text-align: center; position: relative;">
+                                                            <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                            <input type="file" name="Address-0" id="txtAddress" class="txtAddress" style="opacity: 0; position: absolute; right: 0; top: 0; width: 100px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Owner's Photo</td>
+                                                        <td>Pending</td>
+                                                        <td style="text-align: center; position: relative;">
+                                                            <a href="#"><i class="hvr-buzz-out fa fa-upload"></i></a>
+                                                            <input type="file" name="Photo-0" id="txtPhoto" class="txtPhoto" style="opacity: 0; position: absolute; right: 0; top: 0; width: 100px;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+
+                        </div> 
+                        <div id="addMore"></div>
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input name="chkAuthorize" id="chkAuthorize" type="checkbox">
+                                            <label for="txtMobile">I authorize ABC to pull my consumer CIBIL.</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="chkTerms" id="chkTerms" type="checkbox">
+                                            <label for="txtMobile">I agreed to the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy of ABC</a></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <button type="button" name="btnSubmit" id="btnSubmit" class="btn btn-primary">Submit</button>
+                                </div>
+
+
+
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+ </div>
+ 
+ <div class="where-are-you">
+ 	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-4">
+            	<figure>
+                	<img src="images/localtion.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4">
+            	<figure>
+                	<img src="images/thousend.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4">
+            	<figure>
+                	<img src="images/lock.png" alt="image" title="location"/>
+                    <figcaption>
+                    	<h3>Where Ever You Are</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+
+
+    <% include ../partials/footer %>
+
+
+
+
+
+    <% include ../partials/bottom %>
+
+
+
+    
+
+    <style>
+        th {
+            padding: 14px !important;
+        }
+        .form-pannel fieldset {
+            border: 1px solid #ccc;
+            min-height: 325px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .mandatory-txt {
+            color: #ff0000;
+            float: left;
+        }
+        .mandatory {
+            color: #ff0000;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#btnAddMore").click(function() {
+                $('#addMore').append($("#divOwner").html());
+
+
+                
+
+                for(i = 0; i < $(".txtPan").length; i = i + 1) {
+                    $(".txtPan").eq(i).attr("name", $(".txtPan").eq(i).attr("name").replace('Pan-0', 'Pan-'+i));
+                }
+
+                for(i = 0; i < $(".txtAddress").length; i = i + 1) {
+                    $(".txtAddress").eq(i).attr("name", $(".txtAddress").eq(i).attr("name").replace('Address-0', 'Address-'+i));
+                }
+
+                for(i = 0; i < $(".txtPhoto").length; i = i + 1) {
+                    $(".txtPhoto").eq(i).attr("name", $(".txtPhoto").eq(i).attr("name").replace('Photo-0', 'Photo-'+i));
+                }
+            });
+
+
+            $("#verfiyAadhaar").click(function() {
+
+                if($("#txtAadhar").val()!="") {
+                    winAadhaar = window.open("http://localhost:3202/supplier/get-aadhaar", "", "width=900,height=500,left=600,top=300");
+                }
+                else {
+                    alert("Please Enter Aadhaar No.");
+                }
+            });
+
+
+            $("#btnSubmit").click(function() {
+                if($("#chkAuthorize").is(":checked")) {
+                    if($("#chkAuthorize").is(":checked")) {
+                        $("#frmOwner").submit();
+                    }
+                    else {
+                        alert("Please Accept Terms of Use & Privacy Policy");
+                    }
+                }
+                else {
+                    alert("Please Accept to pull consumer CIBIL.");
+                }
+            });
+        });
+    </script>
+
+
+
+
+</body>
+</html>

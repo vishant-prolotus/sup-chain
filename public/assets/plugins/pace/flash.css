@@ -1,0 +1,361 @@
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: #37a000;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+.pace .pace-progress-inner {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29d, 0 0 5px #37a000;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -moz-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    -o-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 20px;
+    left: 320px;
+    width: 20px;
+    height: 20px;
+    border: solid 2px transparent;
+    border-top-color: #37a000;
+    border-left-color: #37a000;
+    border-radius: 10px;
+    -webkit-animation: pace-spinner 400ms linear infinite;
+    -moz-animation: pace-spinner 400ms linear infinite;
+    -ms-animation: pace-spinner 400ms linear infinite;
+    -o-animation: pace-spinner 400ms linear infinite;
+    animation: pace-spinner 400ms linear infinite;
+}
+
+#student-model{ display:none;}
+
+
+/*============small business page start here===================*/
+.top-nav{ background:#000;}
+.top-nav p{ color:#fff; text-align:center; margin-bottom:0; padding:10px 0px; font-size:14px;}
+.top-nav p > i{ margin-right:10px;}
+.top-nav p a{ color:#fff;}
+.my-nav .nabvigation{margin-top: 20px;}
+.my-nav .nabvigation #navbar{margin-top: 9px;}
+.my-nav .navbar-nav>li {
+    float: left;
+    padding: 0px 20px;
+}
+.my-nav .navbar-nav>li>a{color: #222222 !important; font-size:14px;}
+.my-nav .navbar-form > input{border: 1px solid #cecece;}
+.navbar.my-nav{
+    background-color: #fff;
+    border-color: #e7e7e7;
+    margin-bottom: 0;
+    min-height: 100px;
+    padding-top: 18px;
+}
+.my-nav .navbar-right{ margin-top:8px;}
+.my-nav .navbar-form > i{
+	position: absolute;
+    right: 30px;
+    top: 17px;}
+.banner-area figure figcaption{
+	position: absolute;
+    top: 50%;
+    color: #fff;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner-area figure figcaption > a.btn{
+	background: #eb2427 none repeat scroll 0 0;
+    border-radius: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 40px;
+    padding: 0;
+    transition: all 1s ease 0s;
+    width: 185px;
+}
+.banner-area figure figcaption > a.btn:hover{ background:#000; color:#fff !important;}
+.banner-area figure figcaption h2{ text-transform:uppercase; font-size:45px;}
+.banner-area{ position:relative;}
+.banner-area .banner-ratio{
+	position: absolute;
+    width: 100%;
+    bottom: -56px;
+}
+.banner-area .banner-ratio .col-sm-offset-2{
+	background: #eb2427 none repeat scroll 0 0;
+    color: #fff;
+    padding: 29px;
+    text-align: center;
+}
+.banner-area .banner-ratio .col-sm-offset-2 .row .col-sm-4{border-right: 1px solid #000;}
+.banner-area .banner-ratio .col-sm-offset-2 .row .col-sm-4:last-child{ border-right:none;}
+.banner-area .banner-ratio .col-sm-offset-2 .row .col-sm-4 > span{ font-size:24px;}
+.banner-area .banner-ratio .col-sm-offset-2 .row .col-sm-4 > p{ 
+ font-size: 14px;
+color: #1b1b1b;
+font-weight: 400;
+	}
+.where-are-you{
+	padding-top: 106px;
+    padding-bottom: 90px;
+    background: #e9e9e9;
+	}
+.where-are-you .col-sm-4 figure{ text-align:center;}
+.where-are-you .col-sm-4 figure p{ text-align:justify;}
+.where-are-you .col-sm-4 figure h3:hover{ color:#f8c93f; cursor:pointer;}
+.footer{ background:#1b1b1b; padding-top:50px;}
+.small-footer .row .col-sm-3 p,a{ color:#fff;}
+.small-footer .row .col-sm-3 ul{ padding:0; list-style:none;}
+.small-footer .row .col-sm-3 h4{ color:#eb2427;}
+.small-footer .row .col-sm-3 p > i{font-size: 18px; margin-right: 11px;}
+.small-footer a{ color:#fff;}
+.small-footer .row .col-sm-3:last-child a{ margin-right:14px; font-size:18px;}
+.small-footer .row .col-sm-3{}
+.small-footer .row .col-sm-3:last-child{ border:none;}
+.small-footer .border-right{ border-right:1px solid #ddd; padding-top: 20px !important; padding-bottom:15px}
+.small-footer ul{ padding-right:10px;}
+.banner-area img{ width:100%;}
+.my-nav .navbar-nav > li:last-child{ padding-right:0;}
+.form-pannel fieldset{
+	border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 263px;
+}
+.my-nav .navbar-brand {
+    padding: 0;
+}
+
+.my-nav .navbar-brand span {
+    color: #000;
+    font-size: 14px;
+    left: 225px;
+    position: absolute;
+    text-align: left;
+    top: 33px;
+    width: 300px;
+}
+
+.form-pannel fieldset legend{
+	position: static;
+display: block;
+margin-top: 44px;
+margin-bottom: 0;
+}
+
+
+/*==========responsive pages css start here======*/
+@media only screen and (max-width: 1024px) {
+	.my-nav .navbar-nav > li{padding: 0px 6px;}
+	.navbar.my-nav{ padding-top:0;}
+	.navbar.my-nav{ height:auto;min-height:auto;}
+	}
+@media only screen and (max-width: 768px) {
+	.banner-area figure figcaption h2{ font-size:30px;}
+	.my-nav .navbar-nav > li {
+		float: left;
+		padding: 0px 0px;
+	}
+	.navbar.my-nav{ padding-top:0;}
+	}
+@media only screen and (max-width: 640px) {
+	.navbar-nav > li {
+    float: none;
+    padding: 0px 0px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+}
+.my-nav .navbar-form > i {
+    position: absolute;
+    right: 14px;
+    top: 27px;
+}
+	.banner-area figure figcaption h2{ font-size:19px;}
+	.banner-area .banner-ratio{ position:static;}
+	.banner-area figure figcaption > a.btn{
+		background: #f8c93f;
+	color: #000;
+	font-size: 13px;
+	font-weight: 600;
+	height: 35px;
+	line-height: 35px;
+	width: 118px;
+	padding: 0px;
+	margin-top: -8px;
+	transition: all 1s ease;
+	border-radius: 0;
+}
+.banner-area .banner-ratio .col-sm-offset-2 .row .col-sm-4{ border-right:none; border-bottom:1px solid #000;}
+.banner-area figure figcaption{ top:18%;}
+.where-are-you {
+    background: #eb2427 none repeat scroll 0 0;
+    color: #fff;
+    padding: 29px;
+    text-align: center;
+}
+.small-footer .border-right{ border-right:0;}
+.small-footer .pull-right{ float:none !important; direction:block; text-align:center;}
+	}
+
+
+
+
+
+
+@-webkit-keyframes pace-spinner {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+    0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+    0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+    0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+    0% { transform: rotate(0deg); transform: rotate(0deg); }
+    100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+
+/*==================31 maya tausif ===============*/
+.my-nav .navbar-nav>li {
+    float: left;
+    padding: 0px 12px;
+}
+.my-nav .navbar-nav>li > span{
+	position: absolute;
+	display: block;
+	width: 85%;
+	height: 3px;
+	background: #ea2628;
+	transition:all 0.5s;
+	transform: scale(0,0);
+	text-align: center;
+}
+
+.my-nav .navbar-nav>li:hover span{transform: scale(1,1);}
+
+#myModal .modal-header {
+    padding: 5px 10px;
+    border-bottom: 1px solid #e1e6ef;
+    background-color: #ea2628;
+    color: #fff;
+}
+#myModal .modal-header h1{font-size: 26px; text-transform:uppercase;}
+#myModal .modal-header .close{ 
+	opacity: 1;
+	top: 12px;
+	position: absolute;
+	right: 12px;
+}
+#myModal .modal-header .close > span{
+	display: block;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	line-height: 22px;
+	border: 1px solid #fff;
+	border-radius: 20px;
+}
+#myModal .form-group > label{
+	color: #888;
+font-weight: 300;
+}
+.steps{
+	display: block;
+	width: 767px;
+	margin: 20px auto;
+}
+
+label{
+	color: #888;
+font-weight: 300;
+}
+.checkbox-input{
+	top: 1px;
+position: relative;
+}
+.form1 h3{
+	margin-top: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#frmOwner h3{
+	margin-top: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.mb{margin-bottom: 15px;}
+.form-pannel fieldset{
+	border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 281px;
+}
+#divOwner{margin-bottom: 15px;}
+
+
+
+.form1 h3 {
+    background: #ea2628 none repeat scroll 0 0;
+    border-bottom: 1px solid #e5e5e5;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    text-align: center;
+}
+
+
+
+.top-nav p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+.top-nav p > i {
+    margin-right: 10px;
+}
+

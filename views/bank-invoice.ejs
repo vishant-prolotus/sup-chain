@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SofoSupply - Lender Invoice</title>
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/dist/img/ico/favicon.png" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="assets/dist/img/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/dist/img/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="assets/dist/img/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="assets/dist/img/ico/apple-touch-icon-144-precomposed.png">
+
+        <!-- Start Global Mandatory Style
+        =====================================================================-->
+        <!-- jquery-ui css -->
+        <link href="/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap rtl -->
+        <!--<link href="/assets/bootstrap-rtl/bootstrap-rtl.min.css" rel="stylesheet" type="text/css"/>-->
+        <!-- Lobipanel css -->
+        <link href="/assets/plugins/lobipanel/lobipanel.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pace css -->
+        <link href="/assets/plugins/pace/flash.css" rel="stylesheet" type="text/css"/>
+        <!-- Font Awesome -->
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <!-- Pe-icon -->
+        <link href="/assets/pe-icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet" type="text/css"/>
+        <!-- Themify icons -->
+        <link href="/assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css"/>
+        <!-- End Global Mandatory Style
+        =====================================================================-->
+        <!-- Start page Label Plugins 
+        =====================================================================-->
+        <!-- Toastr css -->
+        <link href="/assets/plugins/toastr/toastr.css" rel="stylesheet" type="text/css"/>
+        <!-- Monthly css -->
+        <link href="/assets/plugins/monthly/monthly.css" rel="stylesheet" type="text/css"/>
+        <!-- End page Label Plugins 
+        =====================================================================-->
+        <!-- Start Theme Layout Style
+        =====================================================================-->
+        <!-- Theme style -->
+        <link href="/assets/dist/css/styleBD.css" rel="stylesheet" type="text/css"/>
+        <!-- Theme style rtl -->
+        <!--<link href="/assets/dist/css/styleBD-rtl.css" rel="stylesheet" type="text/css"/>-->
+        <!-- End Theme Layout Style
+        =====================================================================-->
+
+        <link href="/rangeslider.css" rel="stylesheet" type="text/css"/>
+        <link href="/assets/plugins/datatables/dataTables.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+<body class="hold-transition sidebar-mini">
+
+
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            <% include partials/bank_header %>
+            <!-- =============================================== -->
+            <!-- Left side column. contains the sidebar -->
+            <% include partials/bank_left %>
+            <!-- =============================================== -->
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <div class="header-icon">
+                        <i class="hvr-buzz-out fa fa-money"></i>
+                    </div>
+                    <div class="header-title">
+                        <h1>SofoSupply - Lender Invoices</h1>
+                        <small>You can disburse Invoices.</small>
+                        <ol class="breadcrumb">
+                            <li><a href="/bank"><i class="pe-7s-home"></i> Home</a></li>
+                            <li class="active">Manage Invoices</li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="row">
+
+
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 m-b-20">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1" data-toggle="tab">Invoices</a></li>
+                                <li><a href="#tab3" data-toggle="tab">Offers</a></li>
+                                <li><a href="#tab2" data-toggle="tab">Disbursed Invoices</a></li>
+                            </ul>
+                            <!-- Tab panels -->
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab1">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-bd">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title">
+                                                        <h4>Invoices</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="table-responsive">
+                                                        <table id="dataTableExample2" class="table table-striped dataTableExample2">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#Invoice</th>
+                                                                    <th>Invoice Date</th>
+                                                                    <th>Buyer Name</th>
+                                                                    <th>Supplier Name</th>
+                                                                    <th style="text-align: right;">Total</th>
+                                                                    <th style="width: 245px;">
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>    
+                                                                <%if (invoices!=null){%>
+                                                                <% for (var i=0;i<invoices.length;i++) { 
+                                                                    var status=0;
+                                                                    if (accData.offers){
+                                                                    for (var k=0;k<accData.offers.length;k++){
+                                                                        if (accData.offers[k].details.details.invoiceId==invoices[i].invoiceId){
+                                                                            status=status+1;
+                                                                        }
+                                                                    }
+                                                                    }
+                                                                    %>
+                                                                    <% if (invoices[i].status=="approved"&&status==0) { %>
+                                                                    <tr>
+                                                                    <td>
+                                                                        <a href="/bank/view-invoice?poid=<%=invoices[i].invoiceId.slice(0,(invoices[i].invoiceId.length))%>&supplier=<%=suppliers[i]%>&buyer=<%=buyers[i]%>"><%=invoices[i].invoiceId%></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <%=invoices[i].date%>
+                                                                        <%=invoices[i].time%>
+                                                                    </td>
+                                                                    <td><%=buyers[i]%></td>
+                                                                    <td><%=suppliers[i]%></td>
+                                                                    <td style="text-align: right;"><%=configData.currency%> <%=invoices[i].total.toFixed(2)%></td>
+                                                                    <td>
+                                                                        <a href="javascript:;" id="<%=invoices[i].invoiceId.slice(0,(invoices[i].invoiceId.length))%>###<%=invoices[i].total%>###<%=invoices[i].buyer%>###<%=invoices[i].supplier%>" class="btn btn-warning w-md m-b-5 btn-sm btnOffer">Generate Offer</a>
+                                                                        <%var supplierIcount=0;%>
+                                                                        <% for (var z=0;z<userData.supplierInvoiceLimits.length;z++){%>
+                                                                            <%if (userData.supplierInvoiceLimits[z].supplierId==invoices[i].supplier) {supplierIcount++; %>
+                                                                                <%if (userData.supplierInvoiceLimits[z].limit<invoices[i].total){ %>
+                                                                                    Red Flag1 
+                                                                                <%}else {%>
+                                                                                <%var supplierTcount=0%>
+                                                                                    <% for (var m=0;m<userData.supplierLimits.length;m++){%>
+                                                                                        <%if (userData.supplierLimits[m].supplierId==invoices[i].supplier){supplierTcount++;%>
+                                                                                            <%if (userData.supplierLimits[m].limit>=invoices[i].total){%>
+                                                                                                Green Flag1
+                                                                                            <%}else {%>
+                                                                                                Red Flag2
+                                                                                            <%}%>
+                                                                                        <%}%>
+                                                                                    
+                                                                                    <%}%>
+                                                                                    <%if (userData.supplierLimits.length==0||supplierTcount==0){%>
+                                                                                        Green Flag2
+                                                                                    <%}%>
+
+                                                                                <%}%>
+                                                                            <%}%>
+                                                                        <%}%>
+                                                                        <%if (userData.supplierInvoiceLimits.length==0||supplierIcount==0){%>
+                                                                            Green Flag3
+                                                                        <%}%>
+                                                                        <!--<a href="javascript:;" id="<%=invoices[i].invoiceId.slice(1,(invoices[i].invoiceId.length))%>###<%=invoices[i].total%>###<%=invoices[i].buyer%>###<%=invoices[i].supplier%>" class="btn btn-primary btn-sm btnDisburseAmount">Disburse Invoice</a>-->
+                                                                    </td>
+                                                                    </tr>
+                                                                    <% } %>
+                                                                <% } }%>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane" id="tab2">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-bd">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title">
+                                                        <h4>Invoices</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="table-responsive">
+                                                        <table  class="table table-striped dataTableExample2">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#Invoice</th>
+                                                                    <th>Invoice Date</th>
+                                                                    <th>Buyer Name</th>
+                                                                    <th>Supplier Name</th>
+                                                                    <th >Disbursed Amont</th>
+                                                                    <th>
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+
+                                                                <% if (accData.dInvoices!=null){%>
+                                                                <% for (var j=0;j<accData.dInvoices.length;j++) { %>
+                                                                
+                                                                <% for (var i=0;i<invoices.length;i++) { %>
+                                                                    <% if (invoices[i].invoiceId==accData.dInvoices[j].details.invoiceId) { %>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="/bank/view-invoice?poid=<%=invoices[i].invoiceId.slice(0,(invoices[i].invoiceId.length))%>&supplier=<%=suppliers[i]%>&buyer=<%=buyers[i]%>"><%=invoices[i].invoiceId%></a>
+                                                                        </td>
+                                                                        <td><%=accData.dInvoices[j].date%> <%=accData.dInvoices[j].time%></td>
+                                                                        <td><%=buyers[i]%></td>
+                                                                        <td><%=suppliers[i]%></td>
+                                                                        <td><%=configData.currency%> <%=accData.dInvoices[j].disbursedAmount.toFixed(2)%></td>
+                                                                        <td>
+                                                                            <a href="/bank/view-disburse-invoice?poid=<%=invoices[i].invoiceId.slice(0,(invoices[i].invoiceId.length))%>&supplier=<%=suppliers[i]%>&buyer=<%=buyers[i]%>" class="btn btn-success w-md m-b-5 btn-sm">View Invoice</a>
+                                                                            <% if (accData.dInvoices[j].details.status!='repayed'){%>
+                                                                                 <a href="/bank/markRepayment?invoiceId=<%=invoices[i].invoiceId.slice(0,(invoices[i].invoiceId.length))%>&supplier=<%=invoices[i].supplier%>&buyer=<%=invoices[i].buyer%>" class="btn btn-success w-md m-b-5 btn-sm">Mark Repayment</a>
+                                                                            <% }%>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% } %>
+                                                                <% } } } %>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane" id="tab3">
+                                    <div class="panel-body">
+                                        <div>
+                                            <div class="panel panel-bd">
+                                                <div class="panel-heading">
+                                                    <div class="panel-title">
+                                                        <h4>Disbursed Invoices</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div class="table-responsive">
+                                                        <table  class="table table-striped dataTableExample2">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>#Invoice</th>
+                                                                    <th>Offer Date</th>
+                                                                    <th>Buyer Name</th>
+                                                                    <th>Supplier Name</th>
+                                                                    <th>Discount Rate (APR)</th>
+                                                                    <th>#Days</th>
+                                                                    <th style="text-align: right;">Offered Amount</th>
+                                                                    <th>
+                                                                        Action
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <% if (accData.offers!=null){%>
+                                                                <% for (var j=0;j<accData.offers.length;j++) { %>
+
+                                                                   <% for (var i=0;i<invoices.length;i++) { %>
+                                                                       <%
+                                                                            if (invoices[i].invoiceId==accData.offers[j].details.details.invoiceId) {
+                                                                                if(invoices[i].status!="disbursed") {
+                                                                       %>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="/bank/view-invoice?poid=<%=accData.offers[j].details.details.invoiceId%>&supplier=<%=suppliers[i]%>&buyer=<%=buyers[i]%>"><%=accData.offers[j].details.details.invoiceId%></a>
+                                                                        </td>
+                                                                        <td><%=accData.offers[j].details.date%> <%=accData.offers[j].details.time%></td>
+                                                                        <td><%=buyers[i]%></td>
+                                                                        <td><%=suppliers[i]%></td>
+                                                                        <td><%=accData.offers[j].details.disRate%>%</td>
+                                                                        <td><%=accData.offers[j].details.days%></td>
+                                                                        <td style="text-align: right;"><%=configData.currency%> <%=accData.offers[j].details.disbursedAmount.toFixed(2)%></td>
+                                                                        <td>
+                                                                            <% if(accData.offers[j].status=="approved") { %>
+                                                                                <a href="javascript:;" id="<%=accData.offers[j].details.details.invoiceId.slice(0,(accData.offers[j].details.details.invoiceId.length))%>###<%=accData.offers[j].details.details.total%>###<%=accData.offers[j].details.details.buyer%>###<%=accData.offers[j].details.details.supplier%>###<%=accData.offers[j].details.disRate%>###<%=accData.offers[j].details.days%>###<%=accData.offers[j].details.disbursedAmount.toFixed(2)%>" class="btn btn-primary btn-sm btnDisburseAmount">Disburse Invoice</a>
+                                                                            <% } else { %>
+                                                                                <%=accData.offers[j].status%>
+                                                                            <% } %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <%} } } }%>
+                                                                <% }   %>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div> <!-- /.row -->
+                </section> <!-- /.content -->
+            </div> <!-- /.content-wrapper -->
+            <% include partials/admin_footer %>
+        </div>
+
+
+
+
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form action="/bank/disburseInvoice" method="post">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h1 class="modal-title">Disburse Invoice</h1>
+                    </div>
+                    <div class="modal-body">
+                        
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Invoice Amount</label>
+                                <input type="text" name="invAmount" id="invAmount" value="" class="form-control" readonly>
+                                <input type="hidden" name="invID" id="invID" value="">
+                                <input type="hidden" name="buyer" id="buyer" value="">
+                                <input type="hidden" name="supplier" id="supplier" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Discount Rate (%)</label>
+                                <input type="text" name="discountRate" id="discountRate" value="" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">No of Days</label>
+                                <input type="text" name="noDays" id="noDays" value="" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="penaltyPerDay">Penalty per Day</label>
+                                <input type="text" name="penaltyPerDay" id="penaltyPerDay" value="" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                                <label for="exampleSelect1">Recourse</label>
+                                                <select class="form-control" id="recourse">
+                                                    <option value="">None</option>
+                                                    <option value="Seller">Seller</option>
+                                                    <option value="Buyer">Buyer</option>
+                                                </select>
+                                        </div> 
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Disburse Amount</label>
+                                <input type="text" name="disburseAmount" id="disburseAmount" value="" class="form-control" readonly>
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+
+        <div class="modal fade" id="offerModel" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form action="/bank/offer-invoice" method="post">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h1 class="modal-title">Generate Offer</h1>
+                    </div>
+                    <div class="modal-body">
+                        
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Invoice Amount (<%=configData.currency%>)</label>
+                                <input type="text" name="invAmount" id="invAmount_Offer" value="" class="form-control">
+                                <input type="hidden" name="invID" id="invID_Offer" value="">
+                                <input type="hidden" name="buyer" id="buyer_Offer" value="">
+                                <input type="hidden" name="supplier" id="supplier_Offer" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Discount Rate (% in APR)</label>
+                                <input type="text" name="discountRate" id="discountRate_Offer" value="<%=userData.invoiceFunding%>" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">No of Days</label>
+                                <input type="text" name="noDays" id="noDays_Offer" value="" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Discount Amount (<%=configData.currency%>)</label>
+                                <input type="text" name="discountAmount" id="discountAmount_Offer" value="" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtCreditPeriod">Disburse Amount (<%=configData.currency%>)</label>
+                                <input type="text" name="disburseAmount" id="disburseAmount_Offer" value="" class="form-control" readonly>
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                    </form>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
+
+
+
+
+
+
+        <!-- ./wrapper -->
+        <!-- Start Core Plugins
+        =====================================================================-->
+        <!-- jQuery -->
+        <script src="/assets/plugins/jQuery/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <!-- jquery-ui --> 
+        <script src="/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="/assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- lobipanel -->
+        <script src="/assets/plugins/lobipanel/lobipanel.min.js" type="text/javascript"></script>
+        <!-- Pace js -->
+        <script src="/assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+        <!-- SlimScroll -->
+        <script src="/assets/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="/assets/plugins/fastclick/fastclick.min.js" type="text/javascript"></script>
+        <!-- AdminBD frame -->
+        <script src="/assets/dist/js/frame.js" type="text/javascript"></script>
+        <!-- End Core Plugins
+        =====================================================================-->
+        <!-- Start Page Lavel Plugins
+        =====================================================================-->
+        <!-- Toastr js -->
+        <script src="/assets/plugins/toastr/toastr.min.js" type="text/javascript"></script>
+        <!-- Sparkline js -->
+        <script src="/assets/plugins/sparkline/sparkline.min.js" type="text/javascript"></script>
+        <!-- Data maps js -->
+        <script src="/assets/plugins/datamaps/d3.min.js" type="text/javascript"></script>
+        <script src="/assets/plugins/datamaps/topojson.min.js" type="text/javascript"></script>
+        <script src="/assets/plugins/datamaps/datamaps.all.min.js" type="text/javascript"></script>
+        <!-- Counter js -->
+        <script src="/assets/plugins/counterup/waypoints.js" type="text/javascript"></script>
+        <script src="/assets/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+        <!-- Emojionearea -->
+        <script src="/assets/plugins/emojionearea/emojionearea.min.js" type="text/javascript"></script>
+        <!-- Monthly js -->
+        <script src="/assets/plugins/monthly/monthly.js" type="text/javascript"></script>
+        <!-- End Page Lavel Plugins
+        =====================================================================-->
+        <!-- Start Theme label Script
+        =====================================================================-->
+        <!-- Dashboard js -->
+        <script src="/assets/dist/js/dashboard.js" type="text/javascript"></script>
+        
+        <script src="/rangeslider.js" type="text/javascript"></script>
+        <!-- End Theme label Script
+        =====================================================================-->
+        <script src="/assets/plugins/datatables/dataTables.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+
+                "use strict"; // Start of use strict
+
+
+                $(".btnDisburseAmount").click(function() {
+                    var invData = $(this).attr("id").split("###");
+                    $("#invID").val(invData[0]);
+                    $("#invAmount").val(invData[1]);
+                    $("#buyer").val(invData[2]);
+                    $("#supplier").val(invData[3]);
+                    $("#discountRate").val(invData[4]);
+                    $("#noDays").val(invData[5]);
+                    $("#disburseAmount").val(invData[6]);
+                    $('#myModal').modal('show');
+                });
+
+                $(".btnOffer").click(function() {
+                    var invData = $(this).attr("id").split("###");
+                    $("#invID_Offer").val(invData[0]);
+                    $("#invAmount_Offer").val((invData[1]/1).toFixed(2));
+                    $("#buyer_Offer").val(invData[2]);
+                    $("#supplier_Offer").val(invData[3]);
+                    $('#offerModel').modal('show');
+                });
+
+
+
+                $("#discountRate_Offer").blur(function() {
+                    var totAmt = ($("#invAmount_Offer").val() * $(this).val()) / 100;
+                    $("#discountAmount_Offer").val((totAmt/1).toFixed(2));
+                    $("#disburseAmount_Offer").val((($("#invAmount_Offer").val() - totAmt)/1).toFixed(2));
+                });
+
+
+
+
+
+
+                /*$("#discountRate").blur(function() {
+                    var totAmt = ($("#invAmount").val() * $(this).val()) / 100;
+                    $("#discountAmount").val(totAmt);
+                    $("#disburseAmount").val($("#invAmount").val() - totAmt);
+                });*/
+
+
+
+
+
+                $(".notifications-menu").click(function() {
+                    $.get( "/removeNotifications", function( data ) {
+                        $("#notiCount").remove();
+                    });
+                });
+
+
+                $('#txtRange').rangeslider({
+
+                    // Feature detection the default is `true`.
+                    // Set this to `false` if you want to use
+                    // the polyfill also in Browsers which support
+                    // the native <input type="range"> element.
+                    polyfill: true,
+
+                    // Default CSS classes
+                    rangeClass: 'rangeslider',
+                    disabledClass: 'rangeslider--disabled',
+                    horizontalClass: 'rangeslider--horizontal',
+                    verticalClass: 'rangeslider--vertical',
+                    fillClass: 'rangeslider__fill',
+                    handleClass: 'rangeslider__handle',
+
+                    // Callback function
+                    onInit: function() {},
+
+                    // Callback function
+                    onSlide: function(position, value) {
+                        alert(value);
+                        $("#discountRate").val(value);
+                    },
+
+                    // Callback function
+                    onSlideEnd: function(position, value) {}
+                });
+
+
+
+                $(".dataTableExample2").DataTable({
+                    dom: "<'row'<'col-sm-4'l><'col-sm-4 text-center'B><'col-sm-4'f>>tp",
+                    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                    buttons: [
+                        {extend: 'copy', className: 'btn-sm'},
+                        {extend: 'csv', title: 'ExampleFile', className: 'btn-sm'},
+                        {extend: 'excel', title: 'ExampleFile', className: 'btn-sm'},
+                        {extend: 'pdf', title: 'ExampleFile', className: 'btn-sm'},
+                        {extend: 'print', className: 'btn-sm'}
+                    ]
+                });
+
+            });
+        </script>
+
+
+</body>
+</html>
